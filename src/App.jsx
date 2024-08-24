@@ -49,9 +49,15 @@ function App() {
       Clear();
     }
 
-    if (!firstNum && operator) {
+    if (!firstNum && operator == "-") {
       setOperator("");
       setFirstNum(operator);
+    } else if (!firstNum && operator === "+") {
+      setOperator("");
+    } else if (!firstNum && operator === "*") {
+      setOperator("");
+    } else if (!firstNum && operator === "/") {
+      setOperator("");
     }
 
     if (operator && firstNum) {
