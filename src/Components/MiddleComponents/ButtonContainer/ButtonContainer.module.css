@@ -1,0 +1,9 @@
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-content: flex-start;
+
+  height: 80%;
+}
