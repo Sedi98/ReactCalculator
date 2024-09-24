@@ -30,6 +30,12 @@ function App() {
     setFinalResult("");
   };
 
+
+
+  function rounder(number) {
+    return Math.round(number * 100) / 100;
+  }
+
   const handleLogic = (value, type) => {
     if (type === "number" && !operator) {
       setFirstNum(firstNum + value);
@@ -70,16 +76,16 @@ function App() {
     if (type === "equal") {
       if (operator === "+") {
         let result = +firstNum + +secondNum;
-        setFinalResult(result);
-        resetEqual(result);
+        setFinalResult(rounder(result));
+        resetEqual(rounder(result));
       } else if (operator === "-") {
         let result = +firstNum - +secondNum;
-        setFinalResult(result);
-        resetEqual(result);
+        setFinalResult(rounder(result));
+        resetEqual(rounder(result));
       } else if (operator === "*") {
         let result = +firstNum * +secondNum;
-        setFinalResult(result);
-        resetEqual(result);
+        setFinalResult(rounder(result));
+        resetEqual(rounder(result));
       } else if (operator === "/") {
         let result = +firstNum / +secondNum;
         setFinalResult(Math.round((result + Number.EPSILON) * 100) / 100);
